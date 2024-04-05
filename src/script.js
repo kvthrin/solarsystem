@@ -25,7 +25,7 @@ const sizes = {
 }
 
 // Camera
-const camera = new THREE.PerspectiveCamera(60, sizes.width / sizes.height, 0.001)
+const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.001)
 camera.position.y = 300
 camera.lookAt(0,0,0)
 scene.add(camera)
@@ -199,6 +199,8 @@ const venus = new THREE.Mesh(new THREE.SphereGeometry(4,32,32), new THREE.Shader
     }
 }))
 venusDummy.add(venus)
+scene.add(venusDummy)
+venus.position.x = 44
 
 // Mars
 const mars = new THREE.Mesh(new THREE.SphereGeometry(1.2,32,32), new THREE.ShaderMaterial({
@@ -281,35 +283,35 @@ neptune.position.x = 200
  */
 
 const ringMaterial = new THREE.MeshBasicMaterial({ side: THREE.DoubleSide})
-const mercRing = new THREE.Mesh(new THREE.TorusGeometry(32.2,0.12,2, 100), ringMaterial)
+const mercRing = new THREE.Mesh(new THREE.TorusGeometry(32.2,0.13,2, 100), ringMaterial)
 mercRing.rotateX(Math.PI /2)
 scene.add(mercRing)
 
-const venusRing  = new THREE.Mesh(new THREE.TorusGeometry(44.2,0.12,2, 100), ringMaterial)
+const venusRing  = new THREE.Mesh(new THREE.TorusGeometry(44.2,0.13,2, 100), ringMaterial)
 venusRing.rotateX(Math.PI /2)
 scene.add(venusRing)
 
-const earthRing  = new THREE.Mesh(new THREE.TorusGeometry(62.2,0.12,2, 100), ringMaterial)
+const earthRing  = new THREE.Mesh(new THREE.TorusGeometry(62.2,0.13,2, 100), ringMaterial)
 earthRing.rotateX(Math.PI /2)
 scene.add(earthRing)
 
-const marsRing  = new THREE.Mesh(new THREE.TorusGeometry(78.2,0.12,2, 100), ringMaterial)
+const marsRing  = new THREE.Mesh(new THREE.TorusGeometry(78.2,0.13,2, 100), ringMaterial)
 marsRing.rotateX(Math.PI /2)
 scene.add(marsRing)
 
-const jupiterRing  = new THREE.Mesh(new THREE.TorusGeometry(100.2,0.12,2, 100), ringMaterial)
+const jupiterRing  = new THREE.Mesh(new THREE.TorusGeometry(100.2,0.13,2, 100), ringMaterial)
 jupiterRing.rotateX(Math.PI /2)
 scene.add(jupiterRing)
 
-const saturnRing  = new THREE.Mesh(new THREE.TorusGeometry(138.2,0.12,2, 100), ringMaterial)
+const saturnRing  = new THREE.Mesh(new THREE.TorusGeometry(138.2,0.13,2, 100), ringMaterial)
 saturnRing.rotateX(Math.PI /2)
 scene.add(saturnRing)
 
-const uranusRing  = new THREE.Mesh(new THREE.TorusGeometry(176.2,0.12,2, 100), ringMaterial)
+const uranusRing  = new THREE.Mesh(new THREE.TorusGeometry(176.2,0.13,2, 100), ringMaterial)
 uranusRing.rotateX(Math.PI /2)
 scene.add(uranusRing)
 
-const neptuneRing  = new THREE.Mesh(new THREE.TorusGeometry(200.2,0.12,2, 100), ringMaterial)
+const neptuneRing  = new THREE.Mesh(new THREE.TorusGeometry(200.2,0.13,2, 100), ringMaterial)
 neptuneRing.rotateX(Math.PI /2)
 scene.add(neptuneRing)
 
